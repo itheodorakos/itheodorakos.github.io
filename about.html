@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Iasonas Theodorakos</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1E1E1E;
+            color: #FFFFFF;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #39FF14;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #00BFFF;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #2C2C2C;
+            padding: 20px;
+            border-left: 5px solid #FF4500;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-section h2 {
+            color: #39FF14;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .about-section p {
+            margin-bottom: 10px;
+        }
+
+        /* Button */
+        .cta-btn {
+            background-color: #00BFFF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .cta-btn:hover {
+            background-color: #FF4500;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* JavaScript output box */
+        .output {
+            margin-top: 20px;
+            color: #00BFFF;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>About Me</h1>
+        <p>Welcome to my portfolio</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>Iasonas Theodorakos</h2>
+        <p>I am a cybersecurity professional with a focus on penetration testing and offensive security. With hands-on experience in web application security, network security, and ethical hacking, I help organizations protect their critical assets by identifying and addressing vulnerabilities.</p>
+        <p>My journey started with a Bachelor's in Digital Systems from the University of Piraeus and a Master's in Information Systems Development & Security from the Athens University of Economics & Business. I have a passion for problem-solving, learning new skills, and continuously improving my expertise in cybersecurity.</p>
+        <button class="cta-btn" id="moreInfoBtn">More About Me</button>
+        <div class="output" id="output"></div>
+    </section>
+
+    <script>
+        // JavaScript to display additional information when button is clicked
+        const moreInfoBtn = document.getElementById('moreInfoBtn');
+        const output = document.getElementById('output');
+
+        moreInfoBtn.addEventListener('click', function() {
+            output.innerHTML = `<p>Besides cybersecurity, I enjoy participating in Capture The Flag (CTF) challenges and collaborating with the global hacking community.</p>`;
+        });
+    </script>
+
+</body>
+</html>

@@ -9,7 +9,7 @@
 
 ## Sections
 
-- [About](./about.md)
+- [About](./about.html)
 - [Education](./education.md)
 - [Stack](./stack.md)
 - [Experience](./experience.md)
