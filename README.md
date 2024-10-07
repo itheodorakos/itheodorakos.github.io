@@ -10,7 +10,7 @@
 ## Sections
 
 - [About](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/about.html)
-- [Education](./education.md)
+- [Education](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/education.md)
 - [Stack](./stack.md)
 - [Experience](./experience.md)
 - [Projects & Certifications](./projects-certifications.md)

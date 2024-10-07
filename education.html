@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Iasonas Theodorakos</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F7F7F7;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            padding: 20px;
+        }
+
+        /* Main layout */
+        .container {
+            display: flex;
+            justify-content: center; /* Center content area */
+            align-items: flex-start; /* Align items at the start */
+            width: 100%;
+        }
+
+        /* Left Navigation Links */
+        .nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 30px; /* Space between nav and content */
+            min-width: 150px; /* Minimum width for navigation */
+        }
+
+        .section-link {
+            background-color: #1E90FF; /* Light blue */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold; /* Making the text bolder */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 10px 0; /* Space between links */
+            width: 100%; /* Make buttons full width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+        }
+
+        .section-link:hover {
+            background-color: #FF6347; /* Red on hover */
+            transform: translateY(-2px); /* Slightly lift the button */
+        }
+
+        /* Education Section */
+        .education-section {
+            flex: 1; /* Takes more space compared to the nav */
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Set max width for education section */
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center; /* Center header text */
+            margin-bottom: 20px; /* Space below header */
+        }
+
+        header h2 {
+            font-size: 2.5rem;
+            color: #1E90FF; /* Light blue */
+        }
+
+        header h3 {
+            font-size: 1.5rem; /* Slightly smaller */
+            font-weight: 600; /* Bold the subtitle */
+            margin-top: 10px; /* Space above subtitle */
+        }
+
+        /* Content Styling */
+        .content {
+            font-size: 1rem;
+            line-height: 1.6; /* Improved line spacing */
+            margin-bottom: 20px; /* Space below content */
+        }
+
+        .education-item {
+            margin-bottom: 30px; /* Space between education items */
+            border-left: 5px solid #FF6347; /* Red accent */
+            padding-left: 15px; /* Space between border and text */
+        }
+
+        .education-item h3 {
+            color: #1E90FF; /* Light blue */
+            margin-bottom: 5px; /* Space below title */
+        }
+
+        .education-item h4 {
+            color: #333; /* Darker color for institution */
+            font-size: 1.1rem; /* Slightly larger for institution */
+            margin-bottom: 5px; /* Space below institution */
+        }
+
+        .education-item p {
+            margin-bottom: 5px; /* Space below description */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Navigation Links -->
+        <nav class="nav">
+            <a href="about.html" class="section-link">About</a>
+            <a href="education.html" class="section-link">Education</a>
+            <a href="stack.html" class="section-link">Stack</a>
+            <a href="experience.html" class="section-link">Experience</a>
+            <a href="projects.html" class="section-link">Projects</a>
+            <a href="certifications.html" class="section-link">Certifications</a>
+        </nav>
+
+        <!-- Education Section -->
+        <section class="education-section">
+            <header>
+                <h2>Education</h2>
+            </header>
+
+            <div class="education-item">
+                <h3>Master's Degree in Information Systems Development and Security</h3>
+                <h4>Athens University Of Economics And Business</h4>
+                <p>September 2021 - September 2023</p>
+                <p>Certification in:</p>
+                <ul>
+                    <li>Cybersecurity & Critical Infrastructures Protection</li>
+                </ul>
+                <p>GPA: 8.94 / 10</p>
+                <p>Leveraging Semantic Data Lakes Capabilities Using Knowledge Graphs & Graph Technologies:</p>
+                <p>Proposing the unification of an actioning and decisioning knowledge graph atop Niovity's semantic data lake to implement its semantic layer and further augment the metadata management, data exploration, and lineage, along with enhancement of graph analytics.</p>
+                <p>[1] <a href="http://www.pyxida.aueb.gr/index.php?op=view_object&object_id=10857">View more</a></p>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor's Degree in Informatics and Telecommunications</h3>
+                <h4>National Kapodistrian University of Athens</h4>
+                <p>September 2014 - September 2020</p>
+                <p>Specialized in:</p>
+                <ul>
+                    <li>Data Information and Knowledge Management</li>
+                    <li>Computer Systems: Software & Hardware</li>
+                </ul>
+                <p>GPA: 7.52 / 10</p>
+                <p>A Web-Based Survey Manager for Building Dynamic Surveys with Nested Visualizations:</p>
+                <p>A web survey management tool offering intuitive survey building user interfaces, along with an advanced analytics engine for survey results exploration and visualizations.</p>
+                <p>[1] <a href="https://pergamos.lib.uoa.gr/uoa/dl/object/2928673">View more</a></p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
