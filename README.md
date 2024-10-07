@@ -9,7 +9,7 @@
 
 ## Sections
 
-- [About](./about.html)
+- [About](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/about.html)
 - [Education](./education.md)
 - [Stack](./stack.md)
 - [Experience](./experience.md)
