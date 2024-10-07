@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Iasonas Theodorakos</title>
+    <title>itheodorakos</title>
     <style>
         /* Basic reset */
         * {
@@ -15,8 +15,8 @@
         /* Body styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1E1E1E;
-            color: #FFFFFF;
+            background-color: #F7F7F7;
+            color: #333;
             line-height: 1.6;
             padding: 20px;
         }
@@ -29,47 +29,65 @@
 
         header h1 {
             font-size: 2.5rem;
-            color: #39FF14;
+            color: #1E90FF; /* Light blue */
             text-transform: uppercase;
             margin-bottom: 10px;
         }
 
-        header p {
+        header h3 {
             font-size: 1.2rem;
-            color: #00BFFF;
+            color: #FF6347; /* Red */
         }
 
         /* About Section */
         .about-section {
-            background-color: #2C2C2C;
-            padding: 20px;
-            border-left: 5px solid #FF4500;
+            background-color: #FFFFFF;
+            padding: 50px;
+            border-radius: 60px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            border-left: 5px solid #FF6347; /* Red accent */
             animation: fadeIn 1s ease-in-out;
         }
 
         .about-section h2 {
-            color: #39FF14;
+            color: #1E90FF; /* Light blue */
             margin-bottom: 15px;
             text-transform: uppercase;
         }
 
         .about-section p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centering the nav vertically */
+            align-items: left; /* Aligning links to center */
+            gap: 15px;
+            margin-right: 30px; /* Space between nav and content */
+            min-width: 50px; /* Minimum width for the navigation */
+            height: 100%; /* Full height to center items */
         }
 
         /* Button */
         .cta-btn {
-            background-color: #00BFFF;
+            background-color: #1E90FF; /* Light blue */
             color: #FFFFFF;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
+            font-size: 1rem;
             margin-top: 20px;
+            border-radius: 5px;
         }
 
         .cta-btn:hover {
-            background-color: #FF4500;
+            background-color: #FF6347; /* Hover: Red */
         }
 
         /* Fade-in animation */
@@ -81,7 +99,7 @@
         /* JavaScript output box */
         .output {
             margin-top: 20px;
-            color: #00BFFF;
+            color: #1E90FF; /* Light blue */
         }
 
     </style>
@@ -90,18 +108,26 @@
 
     <!-- Header -->
     <header>
-        <h1>About Me</h1>
-        <p>Welcome to my portfolio</p>
+        <h2>Hi there! 👋 I am Iasonas Theodorakos 🥷🛡️</h2>
+        <h3>Security Engineer | Penetration Tester</h3>
     </header>
 
     <!-- About Section -->
     <section class="about-section">
-        <h2>Iasonas Theodorakos</h2>
-        <p>I am a cybersecurity professional with a focus on penetration testing and offensive security. With hands-on experience in web application security, network security, and ethical hacking, I help organizations protect their critical assets by identifying and addressing vulnerabilities.</p>
-        <p>My journey started with a Bachelor's in Digital Systems from the University of Piraeus and a Master's in Information Systems Development & Security from the Athens University of Economics & Business. I have a passion for problem-solving, learning new skills, and continuously improving my expertise in cybersecurity.</p>
-        <button class="cta-btn" id="moreInfoBtn">More About Me</button>
+        <p>I am a cybersecurity professional with a focus on penetration testing and offensive security. I help organizations secure their systems by identifying and addressing vulnerabilities before they can be exploited.</p>
+        <p>With a strong background in web application security, network security, and ethical hacking, I bring a deep understanding of cybersecurity principles and a hands-on approach to problem-solving.</p>
+        <button class="cta-btn" id="moreInfoBtn">Learn More</button>
         <div class="output" id="output"></div>
     </section>
+
+    <nav class="nav">
+        <a href="about.html" class="section-link">About</a>
+        <a href="education.html" class="section-link">Education</a>
+        <a href="stack.html" class="section-link">Stack</a>
+        <a href="experience.html" class="section-link">Experience</a>
+        <a href="projects.html" class="section-link">Projects</a>
+        <a href="certifications.html" class="section-link">Certifications</a>
+    </nav>
 
     <script>
         // JavaScript to display additional information when button is clicked
@@ -109,7 +135,7 @@
         const output = document.getElementById('output');
 
         moreInfoBtn.addEventListener('click', function() {
-            output.innerHTML = `<p>Besides cybersecurity, I enjoy participating in Capture The Flag (CTF) challenges and collaborating with the global hacking community.</p>`;
+            output.innerHTML = `<p>I'm passionate about continuous learning and expanding my skills, currently working towards OSCP certification. I also enjoy participating in Capture The Flag (CTF) competitions to challenge myself and grow within the global cybersecurity community.</p>`;
         });
     </script>
 
