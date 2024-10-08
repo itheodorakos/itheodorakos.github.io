@@ -12,78 +12,111 @@
             box-sizing: border-box;
         }
 
-        /* Body styles */
+        /* Body styling */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #F7F7F7;
-            color: #333;
-            line-height: 1.6;
+            background-color: #121212; /* Dark grey background */
+            color: #e0e0e0; /* Light text color */
+            line-height: 1.7;
             display: flex;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            height: 100vh; /* Full viewport height */
-            padding: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
         }
 
-        /* Education Section */
+        /* Container for education content */
         .education-section {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            background-color: #1E1E1E; /* Darker grey for card background */
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(53, 22, 22, 0.5);
             padding: 40px;
-            max-width: 800px; /* Wider layout */
-            width: 100%; /* Full width */
+            max-width: 1200px;
+            width: 100%;
         }
 
-        /* Header Styling */
+        /* Header section */
         header {
-            text-align: center; /* Center header text */
-            margin-bottom: 30px; /* Space below header */
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         header h2 {
             font-size: 2.5rem;
-            color: #1E90FF; /* Light blue */
-            margin-bottom: 10px; /* Space below title */
+            color: #BB86FC; /* Light purple */
+            text-transform: uppercase;
         }
 
-        /* Content Styling */
-        .content {
-            font-size: 1.1rem; /* Increased font size */
-            line-height: 1.8; /* Improved line spacing for readability */
-            margin-bottom: 30px; /* Space below content */
-        }
-
+        /* Styling for each education item */
         .education-item {
-            margin-bottom: 40px; /* Space between education items */
-            border-left: 5px solid #FF6347; /* Red accent */
-            padding-left: 15px; /* Space between border and text */
+            margin-bottom: 50px;
+            border-left: 3px solid #BB86FC; /* Light purple accent on the left */
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .education-item:before {
+            content: '🎓'; /* Icon for each education item */
+            font-size: 2rem;
+            position: absolute;
+            left: -40px;
+            top: 0;
+            color: #BB86FC; /* Light purple */
         }
 
         .education-item h3 {
-            color: #001429; /* Light blue */
-            margin-bottom: 5px; /* Space below title */
+            font-size: 1.4rem;
+            color: #BB86FC; /* Light purple */
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
 
         .education-item h4 {
-            color: #333; /* Darker color for institution */
-            font-size: 1.2rem; /* Slightly larger for institution */
-            margin-bottom: 5px; /* Space below institution */
+            font-size: 1.2rem;
+            color: #e0e0e0; /* Light text */
+            margin-bottom: 10px;
         }
 
         .education-item p {
-            margin-bottom: 10px; /* Space below description */
+            margin-bottom: 15px;
             text-align: justify; /* Justify text for a cleaner look */
+        }
+
+        /* Bullet points */
+        ul {
+            margin: 0;
+            padding: 0 20px;
+            list-style-type: disc;
         }
 
         /* Link styling */
         a {
-            color: #8d2412; /* Red color for links */
-            text-decoration: none; /* Remove underline */
+            color: #03DAC6; /* Teal color for links */
+            text-decoration: none;
+            font-weight: bold;
         }
 
         a:hover {
-            text-decoration: underline; /* Underline on hover */
+            text-decoration: underline;
+            color: #BB86FC; /* Light purple on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .education-section {
+                padding: 20px;
+            }
+
+            header h2 {
+                font-size: 2rem;
+            }
+
+            .education-item h3 {
+                font-size: 1.4rem;
+            }
+
+            .education-item h4 {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -91,34 +124,36 @@
 
     <div class="education-section">
         <header>
-            <h2>Education</h2>
+            <h2>Education 📚</h2>
         </header>
 
+        <!-- Master's Degree Section -->
         <div class="education-item">
             <h3>Master's Degree in Information Systems Development and Security</h3>
             <h4>Athens University Of Economics And Business</h4>
             <p>September 2021 - September 2023</p>
-            <p>Certification in:</p>
+            <p>Specialization in:</p>
             <ul>
-                <li>Cybersecurity & Critical Infrastructures Protection</li>
+                <li>Applied Cryptography</li>
+                <li>Computer and Network Security</li>
+                <li>Information Security and Critical Infrastructure Protection</li>
+                <li>Blockchain Technology</li>
+                <li>Penetration Testing</li>
+                <li>Digital Forensics</li>
             </ul>
-            <p>Analysis and prevention of attacks in modern authentication methods</p>
+            <p>Thesis: Analysis and prevention of attacks in modern authentication methods</p>
             <p>[1] <a href="https://www.pyxida.aueb.gr/index.php?op=view_object&object_id=10727">View more</a></p>
         </div>
 
+        <!-- Bachelor's Degree Section -->
         <div class="education-item">
-            <h3>Bachelor's Degree in Informatics and Telecommunications</h3>
-            <h4>National Kapodistrian University of Athens</h4>
-            <p>September 2014 - September 2020</p>
-            <p>Specialized in:</p>
-            <ul>
-                <li>Data Information and Knowledge Management</li>
-                <li>Computer Systems: Software & Hardware</li>
-            </ul>
-            <p>A Web-Based Survey Manager for Building Dynamic Surveys with Nested Visualizations:</p>
-            <p>A web survey management tool offering intuitive survey building user interfaces, along with an advanced analytics engine for survey results exploration and visualizations.</p>
+            <h3>Bachelor's Degree in School of Information & Communication Technologies</h3>
+            <h4>Department of Digital Systems, University of Piraeus</h4>
+            <p>September 2013 - September 2019</p>
+            <p>Thesis: "Scada Monitoring Systems Security"</p>
             <p>[1] <a href="https://pergamos.lib.uoa.gr/uoa/dl/object/2928673">View more</a></p>
         </div>
+
     </div>
 
 </body>
