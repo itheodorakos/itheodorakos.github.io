@@ -21,6 +21,40 @@
             padding: 20px;
         }
 
+        /* Navigation bar styles */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #F7F7F7;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: #333;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            font-size: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-item:hover {
+            background-color: #FF6347;
+            color: #FFFFFF;
+            border-radius: 5px;
+        }
+
+        /* Body content margin to avoid overlap with fixed nav */
+        body {
+            margin-top: 80px;
+        }
+
         /* Header styles */
         header {
             text-align: center;
@@ -48,7 +82,6 @@
             max-width: 1200px;
             margin: 0 auto;
             border-left: 5px solid #FF6347; /* Red accent */
-            animation: fadeIn 1s ease-in-out;
         }
 
         .about-section h2 {
@@ -62,49 +95,43 @@
             font-size: 1.1rem;
             color: #333;
         }
-        .nav {
+
+        /* Links and buttons on the same horizontal line */
+        .links-section {
             display: flex;
-            flex-direction: column;
-            justify-content: center; /* Centering the nav vertically */
-            align-items: left; /* Aligning links to center */
-            gap: 15px;
-            margin-right: 30px; /* Space between nav and content */
-            min-width: 50px; /* Minimum width for the navigation */
-            height: 100%; /* Full height to center items */
-        }
-
-        /* Button */
-        .cta-btn {
-            background-color: #1E90FF; /* Light blue */
-            color: #FFFFFF;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-            font-size: 1rem;
+            justify-content: center;
+            align-items: center;
             margin-top: 20px;
-            border-radius: 5px;
+            gap: 15px;
         }
 
-        .cta-btn:hover {
-            background-color: #FF6347; /* Hover: Red */
+        .badge-btn {
+            text-decoration: none;
+            font-size: 1rem;
         }
 
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .badge-btn img {
+            height: 32px;
         }
 
-        /* JavaScript output box */
+        /* Output section */
         .output {
             margin-top: 20px;
             color: #1E90FF; /* Light blue */
         }
-
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="https://itheodorakos.github.io/about.html" class="nav-item">About</a>
+        <a href="https://itheodorakos.github.io/education.html" class="nav-item">Education</a>
+        <a href="https://itheodorakos.github.io/experience.html" class="nav-item">Experience</a>
+        <a href="https://itheodorakos.github.io/certifications.html" class="nav-item">Certifications</a>
+        <a href="https://itheodorakos.github.io/stack.html" class="nav-item">Stack</a>
+        <a href="https://itheodorakos.github.io/project.html" class="nav-item">Projects</a>
+    </div>
 
     <!-- Header -->
     <header>
@@ -114,28 +141,34 @@
 
     <!-- About Section -->
     <section class="about-section">
-        <p>I am a cybersecurity professional with a focus on penetration testing and offensive security. I help organizations secure their systems by identifying and addressing vulnerabilities before they can be exploited.</p>
-        <p>With a strong background in web application security, network security, and ethical hacking, I bring a deep understanding of cybersecurity principles and a hands-on approach to problem-solving.</p>
-        <button class="cta-btn" id="moreInfoBtn">Learn More</button>
+        <p>I am a cybersecurity professional specializing in both offensive security and defensive strategies. With extensive experience in penetration testing, I help organizations secure their systems by proactively identifying and remediating vulnerabilities before they can be exploited. My offensive expertise is complemented by a strong foundation in web application security, network defense, and ethical hacking, enabling me to tackle challenges from a holistic security perspective.</p>
+
+        <p>In addition to offensive testing, I have hands-on experience in vulnerability management, incident response, and blue team operations. I work closely with teams to ensure vulnerabilities are tracked, prioritized, and remediated efficiently, strengthening the overall security posture. My skill set includes developing strategies to detect and mitigate cyber threats while fostering a culture of security awareness.</p>
+
+        <p>As an active participant in Capture The Flag (CTF) competitions and an enthusiastic Hack The Box (HTB) player, I continually refine my skills, keeping up with the latest threats and techniques in cybersecurity. I am passionate about continuous learning and dedicated to evolving my expertise in both red team and blue team disciplines.</p>
+
+        <!-- Links Section -->
+        <div class="links-section">
+            <a href="https://itheodorakos.github.io/learn-more" class="badge-btn">
+                <img src="https://img.shields.io/badge/-Learn%20More-00BFFF?&style=for-the-badge" alt="Learn More" />
+            </a>
+            <a href="https://www.linkedin.com/in/iasonas-theodorakos/" class="badge-btn">
+                <img src="https://img.shields.io/badge/-LinkedIn-00BFFF?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+            </a>
+            <a href="https://www.hackthebox.com" class="badge-btn">
+                <img src="https://img.shields.io/badge/-Hack%20The%20Box-00BFFF?&style=for-the-badge&logo=hackthebox&logoColor=white" alt="Hack The Box" />
+            </a>
+        </div>
+
         <div class="output" id="output"></div>
     </section>
 
-    <nav class="nav">
-        <a href="https://itheodorakos.github.io/about.html" class="nav-item">About</a>
-        <a href="https://itheodorakos.github.io/education.html" class="nav-item">Education</a>
-        <a href="https://itheodorakos.github.io/experience.html" class="nav-item">Experience</a>
-        <a href="https://itheodorakos.github.io/certifications.html" class="nav-item">Certifications</a>
-        <a href="https://itheodorakos.github.io/stack.html" class="nav-item">Stack</a>
-        <a href="https://itheodorakos.github.io/project.html" class="nav-item">Projects</a>
-    </nav>
-
     <script>
-        // JavaScript to display additional information when button is clicked
-        const moreInfoBtn = document.getElementById('moreInfoBtn');
-        const output = document.getElementById('output');
-
-        moreInfoBtn.addEventListener('click', function() {
-            output.innerHTML = `<p>I'm passionate about continuous learning and expanding my skills, currently working towards OSCP certification. I also enjoy participating in Capture The Flag (CTF) competitions to challenge myself and grow within the global cybersecurity community.</p>`;
+        // Display alert(1) on "Learn More" button click
+        const learnMoreBtn = document.querySelector('.badge-btn[href*="learn-more"]');
+        learnMoreBtn.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent default link behavior
+            alert("ops, don't be curious 😝🤷");  // Trigger the alert(1)
         });
     </script>
 
