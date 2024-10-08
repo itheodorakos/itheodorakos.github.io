@@ -9,11 +9,11 @@
 
 ## Sections
 
-- [About](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/about.html)
-- [Experience](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/experience.html)
-- [Education](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/education.html)
-- [Stack](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/stack.html)
-- [Certifications](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/Certifications.html)
+- [About](https://itheodorakos.github.io/about.html)
+- [Experience](https://itheodorakos.github.io/experience.html)
+- [Education](https://itheodorakos.github.io/education.html)
+- [Stack](https://itheodorakos.github.io/stack.html)
+- [Certifications](https://itheodorakos.github.io/Certifications.html)
 
 
 <!--  ## Objective
