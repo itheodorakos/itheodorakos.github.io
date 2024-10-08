@@ -1,7 +1,7 @@
-### Hi team ☠️
+### Hi there 👋
 
 # I'm Iasonas Theodorakos
-#### Cybersecurity Professional | Penetration Tester
+#### Cybersecurity Professional | Penetration Tester ☠️
 
 <a href="https://www.linkedin.com/in/iasonas-theodorakos/"><img src="https://img.shields.io/badge/-LinkedIn-00BFFF?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
