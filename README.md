@@ -10,10 +10,10 @@
 ## Sections
 
 - [About](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/about.html)
-- [Education](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/education.md)
-- [Stack](./stack.md)
-- [Experience](./experience.md)
-- [Projects & Certifications](./projects-certifications.md)
+- [Experience](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/experience.html)
+- [Education](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/education.html)
+- [Stack](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/stack.html)
+- [Certifications](https://github.com/itheodorakos/itheodorakos.github.io/blob/main/Certifications.html)
 
 
 <!--  ## Objective
