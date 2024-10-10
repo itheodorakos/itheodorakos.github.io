@@ -1,176 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>itheodorakos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #F7F7F7;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
+            background-color: #121212;
+            color: #E0E0E0;
         }
 
-        /* Navigation bar styles */
+        /* Navigation Bar Styles */
         .nav-bar {
-            display: flex;
-            justify-content: center;
-            background-color: #F7F7F7;
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            background-color: #1F1F1F;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .nav-item {
-            color: #333;
-            text-decoration: none;
-            padding: 12px 20px;
-            margin: 0 10px;
-            font-size: 1rem;
-            transition: background-color 0.3s, color 0.3s;
+        .nav-link {
+            padding: 10px 20px;
+            color: #E0E0E0;
+            transition: background-color 0.3s, color 0.3s, opacity 0.3s;
         }
 
-        .nav-item:hover {
-            background-color: #FF6347;
-            color: #FFFFFF;
+        .nav-link:hover {
+            background-color: #FF6347 !important;
+            color: #fff !important;
             border-radius: 5px;
         }
 
-        /* Body content margin to avoid overlap with fixed nav */
-        body {
-            margin-top: 80px;
+        /* Hover Effect: All Links Opacity */
+        .navbar:hover .nav-link {
+            opacity: 0.5;
         }
 
-        /* Header styles */
-        header {
-            text-align: center;
-            margin-bottom: 30px;
+        .navbar .nav-link:hover {
+            opacity: 1 !important;
         }
 
-        header h1 {
+        /* Header */
+        header h2 {
+            color: #FF6347;
             font-size: 2.5rem;
-            color: #1E90FF; /* Light blue */
-            text-transform: uppercase;
-            margin-bottom: 10px;
+            font-weight: bold;
         }
 
         header h3 {
-            font-size: 1.2rem;
-            color: #FF6347; /* Red */
+            color: #1E90FF;
+            font-size: 1.75rem;
+            font-weight: 600;
         }
 
         /* About Section */
         .about-section {
-            background-color: #FFFFFF;
-            padding: 50px;
-            border-radius: 60px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 1200px;
-            margin: 0 auto;
-            border-left: 5px solid #FF6347; /* Red accent */
-        }
-
-        .about-section h2 {
-            color: #1E90FF; /* Light blue */
-            margin-bottom: 15px;
-            text-transform: uppercase;
+            background-color: #1E1E1E;
+            padding: 50px 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid #FF6347;
+            margin-top: 30px;
         }
 
         .about-section p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            color: #333;
+            text-align: justify;
+            line-height: 1.8;
+            color: #B0B0B0;
         }
 
-        /* Links and buttons on the same horizontal line */
-        .links-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            gap: 15px;
-        }
-
-        .badge-btn {
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
+        /* Button Styles */
         .badge-btn img {
-            height: 32px;
+            height: 40px;
         }
 
-        /* Output section */
+        .badge-btn.learn-more img {
+            background-color: #1E90FF;
+        }
+
+        .badge-btn.hackthebox img {
+            background-color: #32CD32;
+        }
+
+        /* Learn More Output Section */
         .output {
-            margin-top: 20px;
-            color: #1E90FF; /* Light blue */
+            color: #1E90FF;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
-    <div class="nav-bar">
-        <a href="https://itheodorakos.github.io/about.html" class="nav-item">About</a>
-        <a href="https://itheodorakos.github.io/education.html" class="nav-item">Education</a>
-        <a href="https://itheodorakos.github.io/experience.html" class="nav-item">Experience</a>
-        <a href="https://itheodorakos.github.io/certifications.html" class="nav-item">Certifications</a>
-        <a href="https://itheodorakos.github.io/stack.html" class="nav-item">Stack</a>
-        <a href="https://itheodorakos.github.io/project.html" class="nav-item">Projects</a>
-    </div>
+    <nav class="navbar navbar-expand-lg nav-bar fixed-top">
+        <div class="container">
+            <a href="https://itheodorakos.github.io/about.html" class="nav-link">👉 About</a>
+            <a href="https://itheodorakos.github.io/education.html" class="nav-link">🎓 Education</a>
+            <a href="https://itheodorakos.github.io/experience.html" class="nav-link">🛡️ Experience</a>
+            <a href="https://itheodorakos.github.io/certifications.html" class="nav-link">🎯 Certifications</a>
+            <a href="https://itheodorakos.github.io/stack.html" class="nav-link">🔧 Stack</a>
+            <a href="https://itheodorakos.github.io/project.html" class="nav-link">🖥️ Projects</a>
+        </div>
+    </nav>
 
     <!-- Header -->
-    <header>
-        <h2>Hi there! 👋 I am Iasonas Theodorakos 🥷🛡️</h2>
-        <h3>Security Engineer | Penetration Tester</h3>
+    <header class="text-center mt-5 pt-5">
+        <h2>Welcome! I am Iasonas Theodorakos</h2>
+        <h3>Security Engineer | Offensive Security Professional | Penetration Tester</h3>
     </header>
 
     <!-- About Section -->
-    <section class="about-section">
-        <p>I am a cybersecurity professional specializing in both offensive security and defensive strategies. With extensive experience in penetration testing, I help organizations secure their systems by proactively identifying and remediating vulnerabilities before they can be exploited. My offensive expertise is complemented by a strong foundation in web application security, network defense, and ethical hacking, enabling me to tackle challenges from a holistic security perspective.</p>
-
-        <p>In addition to offensive testing, I have hands-on experience in vulnerability management, incident response, and blue team operations. I work closely with teams to ensure vulnerabilities are tracked, prioritized, and remediated efficiently, strengthening the overall security posture. My skill set includes developing strategies to detect and mitigate cyber threats while fostering a culture of security awareness.</p>
-
-        <p>As an active participant in Capture The Flag (CTF) competitions and an enthusiastic Hack The Box (HTB) player, I continually refine my skills, keeping up with the latest threats and techniques in cybersecurity. I am passionate about continuous learning and dedicated to evolving my expertise in both red team and blue team disciplines.</p>
+    <section class="about-section container mt-5">
+        <p>
+            I am a cybersecurity professional specializing in both offensive security and defensive strategies. With extensive experience in penetration testing, I help organizations secure their systems by proactively identifying and remediating vulnerabilities before they can be exploited. My offensive expertise is complemented by a strong foundation in web application security, network defense, and ethical hacking, enabling me to tackle challenges from a holistic security perspective.
+        </p>
+        <p>
+            In addition to offensive testing, I have hands-on experience in vulnerability management, incident response, and blue team operations. I work closely with teams to ensure vulnerabilities are tracked, prioritized, and remediated efficiently, strengthening the overall security posture. My skill set includes developing strategies to detect and mitigate cyber threats while fostering a culture of security awareness.
+        </p>
+        <p>
+            As an active participant in Capture The Flag (CTF) competitions and an enthusiastic Hack The Box (HTB) player, I continually refine my skills, keeping up with the latest threats and techniques in cybersecurity. I am passionate about continuous learning and dedicated to evolving my expertise in both red team and blue team disciplines.
+        </p>
 
         <!-- Links Section -->
-        <div class="links-section">
-            <a href="https://itheodorakos.github.io/learn-more" class="badge-btn">
-                <img src="https://img.shields.io/badge/-Learn%20More-00BFFF?&style=for-the-badge" alt="Learn More" />
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+            <a href="#" class="badge-btn learn-more">
+                <img src="https://img.shields.io/badge/-Learn%20More-1E90FF?&style=for-the-badge" alt="Learn More" />
             </a>
             <a href="https://www.linkedin.com/in/iasonas-theodorakos/" class="badge-btn">
                 <img src="https://img.shields.io/badge/-LinkedIn-00BFFF?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
             </a>
-            <a href="https://www.hackthebox.com" class="badge-btn">
-                <img src="https://img.shields.io/badge/-Hack%20The%20Box-00BFFF?&style=for-the-badge&logo=hackthebox&logoColor=white" alt="Hack The Box" />
+            <a href="https://www.hackthebox.com" class="badge-btn hackthebox">
+                <img src="https://img.shields.io/badge/-Hack%20The%20Box-32CD32?&style=for-the-badge&logo=hackthebox&logoColor=white" alt="Hack The Box" />
             </a>
         </div>
 
         <div class="output" id="output"></div>
     </section>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Learn More Button Script -->
     <script>
-        // Display alert(1) on "Learn More" button click
-        const learnMoreBtn = document.querySelector('.badge-btn[href*="learn-more"]');
+        // Display alert on "Learn More" button click
+        const learnMoreBtn = document.querySelector('.badge-btn[href="#"]');
         learnMoreBtn.addEventListener('click', function(event) {
-            event.preventDefault();  // Prevent default link behavior
-            alert("ops, don't be curious 😝🤷");  // Trigger the alert(1)
+            event.preventDefault(); // Prevent default link behavior
+            alert("ops, don't be curious 😝🤷"); // Trigger the alert
         });
     </script>
-
 </body>
+
 </html>
