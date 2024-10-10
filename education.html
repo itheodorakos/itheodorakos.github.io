@@ -4,152 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education - Iasonas Theodorakos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body styling */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #F0F2F5;
-            color: #333;
-            line-height: 1.7;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 40px 20px;
+            background-color: #121212;
+            color: #E0E0E0;
         }
 
-        /* Navigation bar styles */
+        /* Navigation Bar Styles */
         .nav-bar {
-            display: flex;
-            justify-content: center; /* Centers the nav items horizontally */
-            background-color: #F7F7F7;
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
+            background-color: #1F1F1F;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .nav-item {
-            color: #333; /* Black text color */
-            text-decoration: none; /* Remove underline from links */
-            padding: 12px 20px;
-            margin: 0 10px;
-            font-size: 1rem;
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+        .nav-link {
+            padding: 10px 20px;
+            color: #E0E0E0;
+            transition: background-color 0.3s, color 0.3s, opacity 0.3s;
         }
 
-        .nav-item:hover {
-            background-color: #FF6347; /* Change background on hover */
-            color: #FFFFFF; /* White text on hover */
+        .nav-link:hover {
+            background-color: #FF6A00 !important;
+            color: #fff !important;
             border-radius: 5px;
         }
 
-        /* Container for education content */
-        .education-section {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 1300px;
-            width: 100%;
-            margin-top: 80px; /* Adjust margin to avoid overlap with fixed navbar */
-        }
-
-        /* Header section */
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
+        /* Header */
         header h2 {
+            color: #FF6A00;
             font-size: 2.5rem;
-            color: #083266; /* Deep blue */
-            text-transform: uppercase;
-        }
-
-        /* Styling for each education item */
-        .education-item {
+            font-weight: bold;
+            text-align: center;
             margin-bottom: 50px;
-            border-left: 3px solid #c52d12; /* Red accent */
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .education-item:before {
-            font-size: 2rem;
-            position: absolute;
-            left: -40px;
-            top: 0;
-            color: #083266;
-        }
-
-        .education-item h3 {
-            font-size: 1.7rem;
-            color: #083266; /* Deep blue */
-            margin-bottom: 0px;
             text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Education Section */
+        .education-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+        .education-item {
+            margin-bottom: 30px;
+            background-color: #1E1E1E;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 70%;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item h3, .education-item h4 {
+            margin: 0;
         }
 
         .education-item h4 {
+            color: #FF6A00;
             font-size: 1.2rem;
-            color: #555; /* Slightly darker text */
-            margin-bottom: 0px;
         }
 
-        .education-item p {
-            margin-bottom: 0px;
-            text-align: justify;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0 20px;
-            list-style-type: disc;
-        }
-
-        /* Styling for thesis and view more link */
         .thesis {
-            margin-top: 6px;
             font-weight: bold;
+            color: #FF6A00;
+            margin-top: 10px;
         }
 
-        /* Minimal 'View more' button styling */
+        /* View More Button */
         .view-more {
-            margin-top: 10px;
             display: inline-block;
-            padding: 5px 10px;
-            background-color: transparent;
-            color: #c52d12;
-            border: 1px solid #c52d12;
+            margin-top: 15px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #FF6A00;
             border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9rem;
             text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease-in-out;
+            font-weight: bold;
         }
 
         .view-more:hover {
-            background-color: #c52d12;
-            color: white;
+            background-color: #FF8C32;
+        }
+
+        /* University Logos */
+        .education-item img {
+            float: left;
+            margin-right: 20px;
+            width: 80px;
+            height: auto;
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .education-section {
-                padding: 20px;
-            }
-
-            header h2 {
-                font-size: 2rem;
+            .education-item {
+                width: 90%;
             }
 
             .education-item h3 {
@@ -157,7 +116,12 @@
             }
 
             .education-item h4 {
-                font-size: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .education-item img {
+                width: 60px;
+                margin-right: 15px;
             }
         }
     </style>
@@ -165,29 +129,31 @@
 <body>
 
     <!-- Navigation Bar -->
-    <div class="nav-bar">
-        <a href="https://itheodorakos.github.io/about.html" class="nav-item">About</a>
-        <a href="https://itheodorakos.github.io/education.html" class="nav-item">Education</a>
-        <a href="https://itheodorakos.github.io/experience.html" class="nav-item">Experience</a>
-        <a href="https://itheodorakos.github.io/certifications.html" class="nav-item">Certifications</a>
-        <a href="https://itheodorakos.github.io/stack.html" class="nav-item">Stack</a>
-        <a href="https://itheodorakos.github.io/project.html" class="nav-item">Projects</a>
-    </div>
+    <nav class="navbar navbar-expand-lg nav-bar fixed-top">
+        <div class="container">
+            <a href="https://itheodorakos.github.io/about.html" class="nav-link">👉 About</a>
+            <a href="https://itheodorakos.github.io/education.html" class="nav-link">🎓 Education</a>
+            <a href="https://itheodorakos.github.io/experience.html" class="nav-link">🛡️ Experience</a>
+            <a href="https://itheodorakos.github.io/certifications.html" class="nav-link">🎯 Certifications</a>
+            <a href="https://itheodorakos.github.io/stack.html" class="nav-link">🔧 Stack</a>
+            <a href="https://itheodorakos.github.io/project.html" class="nav-link">🖥️ Projects</a>
+        </div>
+    </nav>
 
     <div class="education-section">
         <header>
-            <h2>Education 🎓📚</h2>
+            <h2>Education</h2>
         </header>
 
-        <!-- Master's Degree Section -->
         <div class="education-item">
+            <img src="https://th.bing.com/th/id/R.7276498c081d2216f72b139dc4423b30?rik=QIx7yCXtCBRm2w&pid=ImgRaw&r=0" alt="AUEB Logo">
             <h3>Master's Degree in Information Systems Development and Security</h3>
             <h4>Athens University Of Economics And Business</h4>
             <p>September 2021 - September 2023</p>
             <p>Specialization in:</p>
             <ul>
                 <li>Cybersecurity & Digital Infrastructures Protection</li>
-                <li>Digital Infrastructure Technologies	</li>
+                <li>Digital Infrastructure Technologies</li>
                 <li>Applied Cryptography</li>
                 <li>Software & Network Security</li>
                 <li>Cybersecurity Management & Technologies</li>
@@ -199,8 +165,8 @@
             <a class="view-more" href="https://www.pyxida.aueb.gr/index.php?op=view_object&object_id=10727">View more</a>
         </div>
 
-        <!-- Bachelor's Degree Section -->
         <div class="education-item">
+            <img src="https://th.bing.com/th/id/R.4f8b1c791b255c08707fe83fb369a972?rik=TBMQxEQ02adCkQ&riu=http%3a%2f%2ftourism.unipi.gr%2fwp-content%2fuploads%2f2022%2f08%2funipi-logo.png&ehk=X6HDrJuhqnWzDrvuwwsTCXXcWZ%2fWtmWHVjkeKN%2bomAQ%3d&risl=&pid=ImgRaw&r=0" alt="University of Piraeus Logo">
             <h3>Bachelor's Degree in School of Information & Communication Technologies</h3>
             <h4>Department of Digital Systems, University of Piraeus</h4>
             <p>September 2013 - September 2019</p>
@@ -217,8 +183,10 @@
             </ul>
             <p class="thesis">Thesis: "Scada Monitoring Systems Security"</p>
         </div>
-
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

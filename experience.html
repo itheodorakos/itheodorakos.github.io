@@ -4,124 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience - Iasonas Theodorakos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body styling */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #F0F2F5;
-            color: #333;
-            line-height: 1.7;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 40px 20px;
+            background-color: #121212;
+            color: #E0E0E0;
         }
 
-        /* Navigation bar styles */
+        /* Navigation Bar Styles */
         .nav-bar {
-            display: flex;
-            justify-content: center;
-            background-color: #F7F7F7;
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
+            background-color: #1F1F1F;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .nav-item {
-            color: #333;
-            text-decoration: none;
-            padding: 12px 20px;
-            margin: 0 10px;
-            font-size: 1rem;
-            transition: background-color 0.3s, color 0.3s;
+        .nav-link {
+            padding: 10px 20px;
+            color: #E0E0E0;
+            transition: background-color 0.3s, color 0.3s, opacity 0.3s;
         }
 
-        .nav-item:hover {
-            background-color: #FF6347;
-            color: #FFFFFF;
+        .nav-link:hover {
+            background-color: #FF6A00 !important;
+            color: #fff !important;
             border-radius: 5px;
         }
 
-        /* Container for experience content */
+        /* Header */
+        header h2 {
+            color: #FF6A00;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Experience Section */
         .experience-section {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 1300px;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 80px;
         }
 
-        /* Header section */
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header h2 {
-            font-size: 2.5rem;
-            color: #083266;
-            text-transform: uppercase;
-        }
-
-        /* Styling for each experience item */
         .experience-item {
             margin-bottom: 30px;
-            border-left: 3px solid #c52d12;
-            padding-left: 20px;
-            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #1E1E1E;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 70%;
         }
 
-        .experience-item:before {
-            font-size: 2rem;
-            position: absolute;
-            left: -40px;
-            top: 0;
-            color: #083266;
+        .experience-item img {
+            max-width: 100px; /* Adjust this for optimal scaling */
+            height: auto; 
+            margin-right: 20px;
         }
 
-        .experience-item h3 {
-            font-size: 1.7rem;
-            color: #083266;
-            margin-bottom: 5px;
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-item h3, .experience-item h4 {
+            margin: 0;
         }
 
         .experience-item h4 {
+            color: #FF6A00;
             font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 5px;
         }
 
-        .experience-item p {
-            margin-bottom: 0;
-            text-align: justify;
-        }
-
-        /* Adjusting space between experience items */
-        .experience-item:last-child {
-            margin-bottom: 0;
+        .experience-duration {
+            font-weight: 600;
+            color: #666;
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .experience-section {
-                padding: 20px;
+            .experience-item {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            header h2 {
-                font-size: 2rem;
+            .experience-item img {
+                margin-bottom: 15px;
             }
 
             .experience-item h3 {
@@ -137,38 +111,52 @@
 <body>
 
     <!-- Navigation Bar -->
-    <div class="nav-bar">
-        <a href="https://itheodorakos.github.io/about.html" class="nav-item">About</a>
-        <a href="https://itheodorakos.github.io/education.html" class="nav-item">Education</a>
-        <a href="https://itheodorakos.github.io/experience.html" class="nav-item">Experience</a>
-        <a href="https://itheodorakos.github.io/certifications.html" class="nav-item">Certifications</a>
-        <a href="https://itheodorakos.github.io/stack.html" class="nav-item">Stack</a>
-        <a href="https://itheodorakos.github.io/project.html" class="nav-item">Projects</a>
-    </div>
+    <nav class="navbar navbar-expand-lg nav-bar fixed-top">
+        <div class="container">
+            <a href="https://itheodorakos.github.io/about.html" class="nav-link">👉 About</a>
+            <a href="https://itheodorakos.github.io/education.html" class="nav-link">🎓 Education</a>
+            <a href="https://itheodorakos.github.io/experience.html" class="nav-link">🛡️ Experience</a>
+            <a href="https://itheodorakos.github.io/certifications.html" class="nav-link">🎯 Certifications</a>
+            <a href="https://itheodorakos.github.io/stack.html" class="nav-link">🔧 Stack</a>
+            <a href="https://itheodorakos.github.io/project.html" class="nav-link">🖥️ Projects</a>
+        </div>
+    </nav>
 
     <div class="experience-section">
         <header>
-            <h2>EXPERIENCE 💼</h2>
+            <h2>Experience</h2>
         </header>
+
         <div class="experience-item">
-            <h3>Penetration Tester</h3>
-            <h4>Sitecore</h4>
-            <p>November 2023 - May 2024</p>
+            <img src="https://versusxperience.com/img/logo-sitecore.png" alt="Sitecore Logo">
+            <div>
+                <h3>Penetration Tester</h3>
+                <h4>Sitecore</h4>
+                <p class="experience-duration">November 2023 - May 2024</p>
+            </div>
         </div>
 
         <div class="experience-item">
-            <h3>Cyber Security Engineer</h3>
-            <h4>Vodafone Greece</h4>
-            <p>January 2023 - November 2024</p>
+            <img src="https://1000logos.net/wp-content/uploads/2017/06/Vodafone_Logo-500x313.png" alt="Vodafone Logo">
+            <div>
+                <h3>Cyber Security Engineer</h3>
+                <h4>Vodafone Greece</h4>
+                <p class="experience-duration">January 2023 - November 2024</p>
+            </div>
         </div>
 
         <div class="experience-item">
-            <h3>Systems Engineer</h3>
-            <h4>Euronet Worldwide</h4>
-            <p>May 2021 - January 2023</p>
+            <img src="https://cdn.icon-icons.com/icons2/1487/PNG/512/8379-euronet_102463.png" alt="Euronet Logo">
+            <div>
+                <h3>Systems Engineer - QA Tester</h3>
+                <h4>Euronet Worldwide</h4>
+                <p class="experience-duration">May 2021 - January 2023</p>
+            </div>
         </div>
-
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
